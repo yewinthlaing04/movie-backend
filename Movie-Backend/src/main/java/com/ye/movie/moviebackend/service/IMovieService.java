@@ -10,7 +10,7 @@ public interface IMovieService {
 
         // crud query 
 
-        MovieDto addMovie(MovieDto movieDto , MultipartFile file) throws IOException;
+        MovieDto addMovie(MovieDto movieDto , MultipartFile file) throws IOException, RuntimeException;
 
         MovieDto getMovie(Integer movieId);
 
@@ -18,5 +18,5 @@ public interface IMovieService {
 
         MovieDto updateMovie ( Integer movieId , MovieDto movieDto , MultipartFile file ) throws IOException ;
 
-        String deleteMovie ( Integer movieId );
+        String deleteMovie ( Integer movieId ) throws IOException;
 }
